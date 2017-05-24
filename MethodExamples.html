@@ -1,0 +1,121 @@
+<!DOCTYPE hhtml>
+	<script>
+
+		//----------------------------concat------------------------------------
+		console.log("Concat " + concat("Sam","Smith","is","24"));
+
+		function concat(){
+			var concatString = arguments[0];
+
+			for(var i = 1; i < arguments.length; i++){
+				concatString = concatString + arguments[i];
+			}
+			return concatString;
+		}
+		
+		//----------------------------Ends With------------------------------------
+		console.log("Ends With: " + endsWith("I'm a Bears fan", "san"));
+
+		function endsWith(searchPhrase, endsWithPhrase){
+			var truncatePhrase = searchPhrase.substring(searchPhrase.length - endsWithPhrase.length);
+			var match = false;
+			
+			if (truncatePhrase === endsWithPhrase){
+				match = true;
+			}
+			return match;
+		}
+		
+		//----------------------------Includes------------------------------------
+		console.log("Includes: " + includes("I'm a Bears fan", "sears"));
+
+		function includes(searchPhrase, searchWord, startPosition){
+			var truncatePhrase;
+			var matchFound = false;
+
+			for(var i = startPosition; i < searchPhrase.length; i++){
+				
+				if(searchPhrase.substring(i, i + searchWord.length) === searchWord){
+					matchFound = true;
+				}
+			}
+
+			return matchFound;
+		}
+
+		//----------------------------Index of------------------------------------
+		console.log("Index of: " + indexOf("I'm a Bears fan", "sears", 0));
+		console.log("Index of: " + indexOf("I'm a Bears fan", "Bears", 0));
+
+		function indexOf(searchPhrase, searchWord, startPosition){
+			var truncatePhrase;
+			var matchFoundPosition = "-1";
+
+			for(var i = startPosition; i < searchPhrase.length; i++){
+		
+				if(searchPhrase.substring(i, i + searchWord.length) === searchWord){
+					matchFoundPosition = i;
+				}
+			}
+
+			return matchFoundPosition;
+		}
+
+		//----------------------------Push-------------------------------------------
+
+		var yountFamily = ["Nick", "Kristy", "Grant"];
+
+		console.log("Push: " + yountFamily);
+		console.log("Push: " + push(yountFamily, "Aliza", "Nichole", "Jill"));
+		console.log("Push: " + yountFamily);
+
+		function push(){
+			var newArray = arguments[0];
+
+			for(var i = 1; i < arguments.length; i++){
+				newArray [newArray.length] = arguments[i];  
+			}
+			
+			return newArray.length;
+		}
+
+		//----------------------------Concat Array------------------------------------
+		var xboxGames = ["Halo 5", "Wildlands", "Call of Duty"];
+		var psGames	= ["Persona 5", "Dawn Horizon"]
+
+		console.log("Concat Array " +  concatArray(xboxGames, psGames));
+		
+
+		function concatArray(){
+			for(var i = 0; i < arguments.length; i++){
+				for(var k = 0; k < arguments[k.length]; j++){
+					console.log(arguments[i]);				
+				}
+			}
+			return newArray;
+		}
+
+		//----------------------------Join--------------------------------------------
+
+		var boardGames = ["Kanban", "Codenames", "Caverna", "Isle of Skye"]
+
+		console.log("Join: " + join(boardGames, " and "));
+		console.log("Join: " + join(boardGames));
+
+		function join(array, seperator){
+			var arrayIntoString = array[0];
+
+			if (!seperator){
+				seperator = ", ";
+			}
+
+			for(var i = 1; i < array.length; i++){
+				arrayIntoString = arrayIntoString + seperator + array[i];
+			}
+
+			return arrayIntoString;
+		}
+
+	</script>
+		}
+</html>
