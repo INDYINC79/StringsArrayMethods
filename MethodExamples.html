@@ -2,7 +2,7 @@
 	<script>
 
 		//----------------------------concat------------------------------------
-		console.log("Concat " + concat("Sam","Smith","is","24"));
+		console.log("1. Concat " + concat("Sam","Smith","is","24"));
 
 		function concat(){
 			var concatString = arguments[0];
@@ -14,7 +14,7 @@
 		}
 		
 		//----------------------------Ends With------------------------------------
-		console.log("Ends With: " + endsWith("I'm a Bears fan", "san"));
+		console.log("2. Ends With: " + endsWith("I'm a Bears fan", "san"));
 
 		function endsWith(searchPhrase, endsWithPhrase){
 			var truncatePhrase = searchPhrase.substring(searchPhrase.length - endsWithPhrase.length);
@@ -27,7 +27,7 @@
 		}
 		
 		//----------------------------Includes------------------------------------
-		console.log("Includes: " + includes("I'm a Bears fan", "sears"));
+		console.log("3. Includes: " + includes("I'm a Bears fan", "sears"));
 
 		function includes(searchPhrase, searchWord, startPosition){
 			var truncatePhrase;
@@ -44,8 +44,8 @@
 		}
 
 		//----------------------------Index of------------------------------------
-		console.log("Index of: " + indexOf("I'm a Bears fan", "sears", 0));
-		console.log("Index of: " + indexOf("I'm a Bears fan", "Bears", 0));
+		console.log("4a. Index of: " + indexOf("I'm a Bears fan", "sears", 0));
+		console.log("4b. Index of: " + indexOf("I'm a Bears fan", "Bears", 0));
 
 		function indexOf(searchPhrase, searchWord, startPosition){
 			var truncatePhrase;
@@ -62,12 +62,9 @@
 		}
 
 		//----------------------------Push-------------------------------------------
-
 		var yountFamily = ["Nick", "Kristy", "Grant"];
 
-		console.log("Push: " + yountFamily);
-		console.log("Push: " + push(yountFamily, "Aliza", "Nichole", "Jill"));
-		console.log("Push: " + yountFamily);
+		console.log("5. Push: " + push(yountFamily, "Aliza", "Nichole", "Jill"));
 
 		function push(){
 			var newArray = arguments[0];
@@ -82,25 +79,25 @@
 		//----------------------------Concat Array------------------------------------
 		var xboxGames = ["Halo 5", "Wildlands", "Call of Duty"];
 		var psGames	= ["Persona 5", "Dawn Horizon"]
+    
+    	console.log("6. Concat Array: " + arrayConcat(xboxGames, psGames));
 
-		console.log("Concat Array " +  concatArray(xboxGames, psGames));
-		
-
-		function concatArray(){
-			for(var i = 0; i < arguments.length; i++){
-				for(var k = 0; k < arguments[k.length]; j++){
-					console.log(arguments[i]);				
-				}
-			}
-			return newArray;
-		}
-
+    	function arrayConcat ()  {
+      
+      		var ConcatArray= [];
+      		for (var i = 0; i < arguments.length; i++) {
+          		for (var j=0; j< arguments[i].length;j++) {
+            		ConcatArray.push(arguments[i][j]);
+          		}
+      		}
+      	
+      		return ConcatArray;
+    	}
+    
 		//----------------------------Join--------------------------------------------
-
-		var boardGames = ["Kanban", "Codenames", "Caverna", "Isle of Skye"]
-
-		console.log("Join: " + join(boardGames, " and "));
-		console.log("Join: " + join(boardGames));
+		var boardGames = ["Kanban", "Codenames", "Caverna", "Isle of Skye"];
+		
+		console.log("7. Join: " + join(boardGames, " and "));
 
 		function join(array, seperator){
 			var arrayIntoString = array[0];
@@ -112,10 +109,8 @@
 			for(var i = 1; i < array.length; i++){
 				arrayIntoString = arrayIntoString + seperator + array[i];
 			}
-
 			return arrayIntoString;
 		}
 
 	</script>
-		}
 </html>
